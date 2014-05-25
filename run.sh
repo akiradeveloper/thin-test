@@ -15,8 +15,9 @@ echo function_graph > $TRACE/current_tracer
 echo > $TRACE/trace
 echo 1 > $TRACE/options/sym-addr
 echo 1024 > $TRACE/buffer_size_kb
-echo 1 > $TRACE/events/block/enable
-echo 1 > $TRACE/events/syscalls/enable
+# echo 1 > $TRACE/events/block/enable
+# echo 1 > $TRACE/events/syscalls/enable
+echo "*thin*" > $TRACE/set_ftrace_filter
 
 # ----------------------------------------------------
 
@@ -55,7 +56,7 @@ dmsetup message /dev/mapper/pool 0 "create_snap $id1 $id0"
 dmsetup resume /dev/mapper/thin
 # Then activate
 dmsetup create snap1 --table "0 16 thin /dev/mapper/pool $id1"
-echo 0 > $TRACE/tracing_on
+# echo 0 > $TRACE/tracing_on
 cat $TRACE/trace > data/create-snap1-ftrace
 echo > $TRACE/trace
 
