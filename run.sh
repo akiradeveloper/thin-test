@@ -2,7 +2,6 @@ mkdir -p data
 HEXDUMP="hexdump -d"
 TRACE=/sys/kernel/debug/tracing
 
-
 # ----------------------------------------------------
 # Config (on your own environment)
 metadata_dev=/dev/mapper/hvg1-cache2g # metadata dev < 16GB (for what reason?)
@@ -14,6 +13,9 @@ low_water_mark=1
 # Initialize function-graph tracer
 echo function_graph > $TRACE/current_tracer
 echo > $TRACE/trace
+echo 1024 > $TRACE/buffer_size_kb
+echo 1 > $TRACE/events/block/enable
+echo 1 > $TRACE/events/syscalls/enable
 
 # ----------------------------------------------------
 
