@@ -53,6 +53,7 @@ dmsetup resume /dev/mapper/thin
 # Then activate
 dmsetup create snap1 --table "0 16 thin /dev/mapper/pool $id1"
 cat $TRACE/trace > data/create-snap1-ftrace
+echo 0 > $TRACE/tracing_on
 echo > $TRACE/trace
 
 echo > $TRACE/trace
