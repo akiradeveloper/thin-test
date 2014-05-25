@@ -1,0 +1,300 @@
+# tracer: function_graph
+#
+# CPU  DURATION                  FUNCTION CALLS
+# |     |   |                     |   |   |   |
+ 2)   0.018 us    |                                                  } /* save_stack_address */
+ 2)               |                                                  print_ftrace_graph_addr.isra.2.part.3() {
+ 2)   0.025 us    |                                                    save_stack_address();
+ 2)   0.211 us    |                                                  }
+ 2)   0.024 us    |                                                  __kernel_text_address();
+ 2)   0.024 us    |                                                  save_stack_address();
+ 2)               |                                                  __kernel_text_address() {
+ 2)               |                                                    is_module_text_address() {
+ 2)               |                                                      __module_text_address() {
+ 2)   0.024 us    |                                                        __module_address();
+ 2)   0.212 us    |                                                      }
+ 2)   0.409 us    |                                                    }
+ 2)   0.598 us    |                                                  }
+ 2)               |                                                  __kernel_text_address() {
+ 2)               |                                                    is_module_text_address() {
+ 2)               |                                                      __module_text_address() {
+ 2)   0.018 us    |                                                        __module_address();
+ 2)   0.217 us    |                                                      }
+ 2)   0.404 us    |                                                    }
+ 2)   0.598 us    |                                                  }
+ 2)               |                                                  __kernel_text_address() {
+ 2)               |                                                    is_module_text_address() {
+ 2)               |                                                      __module_text_address() {
+ 2)   0.018 us    |                                                        __module_address();
+ 2)   0.211 us    |                                                      }
+ 2)   0.405 us    |                                                    }
+ 2)   0.601 us    |                                                  }
+ 2)               |                                                  __kernel_text_address() {
+ 2)               |                                                    is_module_text_address() {
+ 2)               |                                                      __module_text_address() {
+ 2)   0.019 us    |                                                        __module_address();
+ 2)   0.216 us    |                                                      }
+ 2)   0.404 us    |                                                    }
+ 2)   0.620 us    |                                                  }
+ 2)               |                                                  __kernel_text_address() {
+ 2)               |                                                    is_module_text_address() {
+ 2)               |                                                      __module_text_address() {
+ 2)   0.019 us    |                                                        __module_address();
+ 2)   0.210 us    |                                                      }
+ 2)   0.402 us    |                                                    }
+ 2)   0.610 us    |                                                  }
+ 2)               |                                                  __kernel_text_address() {
+ 2)               |                                                    is_module_text_address() {
+ 2)               |                                                      __module_text_address() {
+ 2)   0.024 us    |                                                        __module_address();
+ 2)   0.213 us    |                                                      }
+ 2)   0.405 us    |                                                    }
+ 2)   0.598 us    |                                                  }
+ 2)               |                                                  __kernel_text_address() {
+ 2)               |                                                    is_module_text_address() {
+ 2)               |                                                      __module_text_address() {
+ 2)   0.019 us    |                                                        __module_address();
+ 2)   0.216 us    |                                                      }
+ 2)   0.404 us    |                                                    }
+ 2)   0.612 us    |                                                  }
+ 2)               |                                                  __kernel_text_address() {
+ 2)               |                                                    is_module_text_address() {
+ 2)               |                                                      __module_text_address() {
+ 2)   0.018 us    |                                                        __module_address();
+ 2)   0.216 us    |                                                      }
+ 2)   0.425 us    |                                                    }
+ 2)   0.613 us    |                                                  }
+ 2)               |                                                  __kernel_text_address() {
+ 2)               |                                                    is_module_text_address() {
+ 2)               |                                                      __module_text_address() {
+ 2)   0.024 us    |                                                        __module_address();
+ 2)   0.210 us    |                                                      }
+ 2)   0.410 us    |                                                    }
+ 2)   0.600 us    |                                                  }
+ 2)               |                                                  __kernel_text_address() {
+ 2)               |                                                    is_module_text_address() {
+ 2)               |                                                      __module_text_address() {
+ 2)   0.018 us    |                                                        __module_address();
+ 2)   0.209 us    |                                                      }
+ 2)   0.405 us    |                                                    }
+ 2)   0.600 us    |                                                  }
+ 2)               |                                                  __kernel_text_address() {
+ 2)               |                                                    is_module_text_address() {
+ 2)               |                                                      __module_text_address() {
+ 2)   0.024 us    |                                                        __module_address();
+ 2)   0.210 us    |                                                      }
+ 2)   0.406 us    |                                                    }
+ 2)   0.615 us    |                                                  }
+ 2)               |                                                  __kernel_text_address() {
+ 2)               |                                                    is_module_text_address() {
+ 2)               |                                                      __module_text_address() {
+ 2)   0.018 us    |                                                        __module_address();
+ 2)   0.211 us    |                                                      }
+ 2)   0.478 us    |                                                    }
+ 2)   0.676 us    |                                                  }
+ 2)               |                                                  __kernel_text_address() {
+ 2)               |                                                    is_module_text_address() {
+ 2)               |                                                      __module_text_address() {
+ 2)   0.024 us    |                                                        __module_address();
+ 2)   0.211 us    |                                                      }
+ 2)   0.411 us    |                                                    }
+ 2)   0.600 us    |                                                  }
+ 2)               |                                                  __kernel_text_address() {
+ 2)               |                                                    is_module_text_address() {
+ 2)               |                                                      __module_text_address() {
+ 2)   0.019 us    |                                                        __module_address();
+ 2)   0.220 us    |                                                      }
+ 2)   0.409 us    |                                                    }
+ 2)   0.605 us    |                                                  }
+ 2)   0.029 us    |                                                  __kernel_text_address();
+ 2)   0.024 us    |                                                  save_stack_address();
+ 2)               |                                                  print_ftrace_graph_addr.isra.2.part.3() {
+ 2)   0.018 us    |                                                    save_stack_address();
+ 2)   0.222 us    |                                                  }
+ 2)               |                                                  __kernel_text_address() {
+ 2)               |                                                    is_module_text_address() {
+ 2)               |                                                      __module_text_address() {
+ 2)   0.024 us    |                                                        __module_address();
+ 2)   0.213 us    |                                                      }
+ 2)   0.406 us    |                                                    }
+ 2)   0.600 us    |                                                  }
+ 2)               |                                                  __kernel_text_address() {
+ 2)               |                                                    is_module_text_address() {
+ 2)               |                                                      __module_text_address() {
+ 2)   0.019 us    |                                                        __module_address();
+ 2)   0.217 us    |                                                      }
+ 2)   0.404 us    |                                                    }
+ 2)   0.599 us    |                                                  }
+ 2)               |                                                  __kernel_text_address() {
+ 2)               |                                                    is_module_text_address() {
+ 2)               |                                                      __module_text_address() {
+ 2)   0.024 us    |                                                        __module_address();
+ 2)   0.211 us    |                                                      }
+ 2)   0.403 us    |                                                    }
+ 2)   0.597 us    |                                                  }
+ 2)               |                                                  __kernel_text_address() {
+ 2)               |                                                    is_module_text_address() {
+ 2)               |                                                      __module_text_address() {
+ 2)   0.018 us    |                                                        __module_address();
+ 2)   0.217 us    |                                                      }
+ 2)   0.404 us    |                                                    }
+ 2)   0.591 us    |                                                  }
+ 2)               |                                                  __kernel_text_address() {
+ 2)               |                                                    is_module_text_address() {
+ 2)               |                                                      __module_text_address() {
+ 2)   0.023 us    |                                                        __module_address();
+ 2)   0.213 us    |                                                      }
+ 2)   0.412 us    |                                                    }
+ 2)   0.601 us    |                                                  }
+ 2)               |                                                  __kernel_text_address() {
+ 2)               |                                                    is_module_text_address() {
+ 2)               |                                                      __module_text_address() {
+ 2)   0.019 us    |                                                        __module_address();
+ 2)   0.216 us    |                                                      }
+ 2)   0.408 us    |                                                    }
+ 2)   0.607 us    |                                                  }
+ 2)               |                                                  __kernel_text_address() {
+ 2)               |                                                    is_module_text_address() {
+ 2)               |                                                      __module_text_address() {
+ 2)   0.024 us    |                                                        __module_address();
+ 2)   0.211 us    |                                                      }
+ 2)   0.408 us    |                                                    }
+ 2)   0.597 us    |                                                  }
+ 2)               |                                                  __kernel_text_address() {
+ 2)               |                                                    is_module_text_address() {
+ 2)               |                                                      __module_text_address() {
+ 2)   0.019 us    |                                                        __module_address();
+ 2)   0.217 us    |                                                      }
+ 2)   0.404 us    |                                                    }
+ 2)   0.597 us    |                                                  }
+ 2)               |                                                  __kernel_text_address() {
+ 2)               |                                                    is_module_text_address() {
+ 2)               |                                                      __module_text_address() {
+ 2)   0.023 us    |                                                        __module_address();
+ 2)   0.213 us    |                                                      }
+ 2)   0.409 us    |                                                    }
+ 2)   0.603 us    |                                                  }
+ 2)   0.029 us    |                                                  __kernel_text_address();
+ 2)   0.022 us    |                                                  save_stack_address();
+ 2)               |                                                  __kernel_text_address() {
+ 2)               |                                                    is_module_text_address() {
+ 2)               |                                                      __module_text_address() {
+ 2)   0.018 us    |                                                        __module_address();
+ 2)   0.223 us    |                                                      }
+ 2)   0.410 us    |                                                    }
+ 2)   0.603 us    |                                                  }
+ 2)               |                                                  __kernel_text_address() {
+ 2)               |                                                    is_module_text_address() {
+ 2)               |                                                      __module_text_address() {
+ 2)   0.024 us    |                                                        __module_address();
+ 2)   0.214 us    |                                                      }
+ 2)   0.412 us    |                                                    }
+ 2)   0.599 us    |                                                  }
+ 2)               |                                                  __kernel_text_address() {
+ 2)               |                                                    is_module_text_address() {
+ 2)               |                                                      __module_text_address() {
+ 2)   0.022 us    |                                                        __module_address();
+ 2)   0.236 us    |                                                      }
+ 2)   0.424 us    |                                                    }
+ 2)   0.625 us    |                                                  }
+ 2)   0.023 us    |                                                  __kernel_text_address();
+ 2)   0.025 us    |                                                  save_stack_address();
+ 2)               |                                                  __kernel_text_address() {
+ 2)               |                                                    is_module_text_address() {
+ 2)               |                                                      __module_text_address() {
+ 2)   0.019 us    |                                                        __module_address();
+ 2)   0.218 us    |                                                      }
+ 2)   0.406 us    |                                                    }
+ 2)   0.602 us    |                                                  }
+ 2)               |                                                  __kernel_text_address() {
+ 2)               |                                                    is_module_text_address() {
+ 2)               |                                                      __module_text_address() {
+ 2)   0.024 us    |                                                        __module_address();
+ 2)   0.213 us    |                                                      }
+ 2)   0.411 us    |                                                    }
+ 2)   0.598 us    |                                                  }
+ 2)               |                                                  __kernel_text_address() {
+ 2)               |                                                    is_module_text_address() {
+ 2)               |                                                      __module_text_address() {
+ 2)   0.019 us    |                                                        __module_address();
+ 2)   0.213 us    |                                                      }
+ 2)   0.406 us    |                                                    }
+ 2)   0.610 us    |                                                  }
+ 2)               |                                                  __kernel_text_address() {
+ 2)               |                                                    is_module_text_address() {
+ 2)               |                                                      __module_text_address() {
+ 2)   0.024 us    |                                                        __module_address();
+ 2)   0.213 us    |                                                      }
+ 2)   0.407 us    |                                                    }
+ 2)   0.599 us    |                                                  }
+ 2)               |                                                  __kernel_text_address() {
+ 2)               |                                                    is_module_text_address() {
+ 2)               |                                                      __module_text_address() {
+ 2)   0.018 us    |                                                        __module_address();
+ 2)   0.217 us    |                                                      }
+ 2)   0.405 us    |                                                    }
+ 2)   0.598 us    |                                                  }
+ 2)               |                                                  __kernel_text_address() {
+ 2)               |                                                    is_module_text_address() {
+ 2)               |                                                      __module_text_address() {
+ 2)   0.024 us    |                                                        __module_address();
+ 2)   0.216 us    |                                                      }
+ 2)   0.409 us    |                                                    }
+ 2)   0.602 us    |                                                  }
+ 2)               |                                                  __kernel_text_address() {
+ 2)               |                                                    is_module_text_address() {
+ 2)               |                                                      __module_text_address() {
+ 2)   0.024 us    |                                                        __module_address();
+ 2)   0.214 us    |                                                      }
+ 2)   0.409 us    |                                                    }
+ 2)   0.602 us    |                                                  }
+ 2)               |                                                  __kernel_text_address() {
+ 2)               |                                                    is_module_text_address() {
+ 2)               |                                                      __module_text_address() {
+ 2)   0.037 us    |                                                        __module_address();
+ 2)   0.231 us    |                                                      }
+ 2)   0.425 us    |                                                    }
+ 2)   0.633 us    |                                                  }
+ 2)               |                                                  __kernel_text_address() {
+ 2)               |                                                    is_module_text_address() {
+ 2)               |                                                      __module_text_address() {
+ 2)   0.023 us    |                                                        __module_address();
+ 2)   0.212 us    |                                                      }
+ 2)   0.411 us    |                                                    }
+ 2)   0.616 us    |                                                  }
+ 2)               |                                                  __kernel_text_address() {
+ 2)               |                                                    is_module_text_address() {
+ 2)               |                                                      __module_text_address() {
+ 2)   0.023 us    |                                                        __module_address();
+ 2)   0.212 us    |                                                      }
+ 2)   0.407 us    |                                                    }
+ 2)   0.613 us    |                                                  }
+ 2)               |                                                  __kernel_text_address() {
+ 2)               |                                                    is_module_text_address() {
+ 2)               |                                                      __module_text_address() {
+ 2)   0.017 us    |                                                        __module_address();
+ 2)   0.218 us    |                                                      }
+ 2)   0.409 us    |                                                    }
+ 2)   0.609 us    |                                                  }
+ 2)               |                                                  __kernel_text_address() {
+ 2)               |                                                    is_module_text_address() {
+ 2)               |                                                      __module_text_address() {
+ 2)   0.018 us    |                                                        __module_address();
+ 2)   0.215 us    |                                                      }
+ 2)   0.403 us    |                                                    }
+ 2)   0.617 us    |                                                  }
+ 2)               |                                                  __kernel_text_address() {
+ 2)               |                                                    is_module_text_address() {
+ 2)               |                                                      __module_text_address() {
+ 2)   0.024 us    |                                                        __module_address();
+ 2)   0.210 us    |                                                      }
+ 2)   0.411 us    |                                                    }
+ 2)   0.599 us    |                                                  }
+ 2)               |                                                  __kernel_text_address() {
+ 2)               |                                                    is_module_text_address() {
+ 2)               |                                                      __module_text_address() {
+ 2)   0.018 us    |                                                        __module_address();
+ 2)   0.214 us    |                                                      }
+ 2)   0.404 us    |                                                    }
+ 2)   0.599 us    |                                                  }
+ ) ! 3084.517 us |                }
