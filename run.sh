@@ -17,7 +17,12 @@ echo 1 > $TRACE/options/sym-addr
 echo 1024 > $TRACE/buffer_size_kb
 # echo 1 > $TRACE/events/block/enable
 # echo 1 > $TRACE/events/syscalls/enable
-echo "*thin*" > $TRACE/set_ftrace_filter
+
+echo > $TRACE/set_ftrace_filter
+for fun in `ruby create_fun_list.rb`
+do
+    echo $fun >> $TRACE/set_ftrace_filter
+done
 
 # ----------------------------------------------------
 
