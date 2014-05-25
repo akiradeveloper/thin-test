@@ -1,0 +1,1248 @@
+# tracer: function_graph
+#
+# CPU  DURATION                  FUNCTION CALLS
+# |     |   |                     |   |   |   |
+ 3)               |  thin_map() {
+ 3)               |    thin_bio_map.isra.40() {
+ 3)   0.076 us    |      __check_holder();
+ 3)               |      __add_holder() {
+ 3)   0.029 us    |        __find_holder();
+ 3)   0.355 us    |      }
+ 3)   0.035 us    |      dm_bm_validate_buffer.isra.4();
+ 3)   0.095 us    |      __check_holder();
+ 3)               |      __add_holder() {
+ 3)   0.023 us    |        __find_holder();
+ 3)   0.321 us    |      }
+ 3)   0.024 us    |      dm_bm_validate_buffer.isra.4();
+ 3)               |      bl_up_read() {
+ 3)   0.023 us    |        __find_holder();
+ 3)   0.441 us    |      }
+ 3)               |      bl_up_read() {
+ 3)   0.019 us    |        __find_holder();
+ 3)   0.403 us    |      }
+ 3)               |      thin_defer_bio() {
+ 3) + 17.205 us   |        wake_worker();
+ 3) + 17.790 us   |      }
+ 3) + 26.757 us   |    }
+ 3) + 27.157 us   |  }
+ 6)               |  do_worker() {
+ 6)   0.370 us    |    process_prepared();
+ 6)   0.175 us    |    process_prepared();
+ 6)   0.038 us    |    thin_put();
+ 6)   0.031 us    |    thin_put();
+ 6)               |    process_bio() {
+ 6) + 15.045 us   |      bio_detain.isra.26();
+ 6)   0.059 us    |      __check_holder();
+ 6)               |      __add_holder() {
+ 6)   0.035 us    |        __find_holder();
+ 6)   0.390 us    |      }
+ 6)   0.038 us    |      dm_bm_validate_buffer.isra.4();
+ 6)   0.028 us    |      __check_holder();
+ 6)               |      __add_holder() {
+ 6)   0.027 us    |        __find_holder();
+ 6)   0.374 us    |      }
+ 6)   0.025 us    |      dm_bm_validate_buffer.isra.4();
+ 6)               |      bl_up_read() {
+ 6)   0.026 us    |        __find_holder();
+ 6)   0.461 us    |      }
+ 6)               |      bl_up_read() {
+ 6)   0.025 us    |        __find_holder();
+ 6)   0.454 us    |      }
+ 6) + 10.148 us   |      bio_detain.isra.26();
+ 6)   0.235 us    |      inc_all_io_entry.isra.27();
+ 6)               |      cell_defer_no_holder() {
+ 6)   2.852 us    |        wake_worker();
+ 6)   8.725 us    |      }
+ 6)               |      remap_and_issue() {
+ 6)               |        issue() {
+ 6)   0.801 us    |          pool_map();
+ 6) + 72.798 us   |        }
+ 6) + 73.255 us   |      }
+ 6)               |      cell_defer_no_holder() {
+ 6)   0.084 us    |        wake_worker();
+ 6)   4.830 us    |      }
+ 6) ! 122.807 us  |    }
+ 6)   0.053 us    |    thin_put();
+ 6) ! 148.776 us  |  }
+ 6)               |  do_worker() {
+ 6)   0.205 us    |    process_prepared();
+ 6)   0.156 us    |    process_prepared();
+ 6)   0.025 us    |    thin_put();
+ 6)   0.025 us    |    thin_put();
+ 6)   0.025 us    |    thin_put();
+ 6)   2.855 us    |  }
+ 5)   1.010 us    |  thin_endio();
+ ------------------------------------------
+ 5)    <idle>-0    =>    dd-2957    
+ ------------------------------------------
+
+ 5)               |  thin_map() {
+ 5)               |    thin_bio_map.isra.40() {
+ 5)   0.069 us    |      __check_holder();
+ 5)               |      __add_holder() {
+ 5)   0.035 us    |        __find_holder();
+ 5)   0.320 us    |      }
+ 5)   0.040 us    |      dm_bm_validate_buffer.isra.4();
+ 5)   0.029 us    |      __check_holder();
+ 5)               |      __add_holder() {
+ 5)   0.028 us    |        __find_holder();
+ 5)   0.309 us    |      }
+ 5)   0.029 us    |      dm_bm_validate_buffer.isra.4();
+ 5)               |      bl_up_read() {
+ 5)   0.027 us    |        __find_holder();
+ 5)   0.442 us    |      }
+ 5)               |      bl_up_read() {
+ 5)   0.024 us    |        __find_holder();
+ 5)   0.443 us    |      }
+ 5)               |      thin_defer_bio() {
+ 5) + 13.637 us   |        wake_worker();
+ 5) + 14.508 us   |      }
+ 5) + 22.758 us   |    }
+ 5) + 23.106 us   |  }
+ ------------------------------------------
+ 6)   kworker-74   =>   kworker-6   
+ ------------------------------------------
+
+ 6)               |  do_worker() {
+ 6)   0.475 us    |    process_prepared();
+ 6)   0.280 us    |    process_prepared();
+ 6)   0.048 us    |    thin_put();
+ 6)   0.035 us    |    thin_put();
+ 6)               |    process_bio() {
+ 6) + 15.374 us   |      bio_detain.isra.26();
+ 6)   0.029 us    |      __check_holder();
+ 6)               |      __add_holder() {
+ 6)   0.024 us    |        __find_holder();
+ 6)   0.390 us    |      }
+ 6)   0.023 us    |      dm_bm_validate_buffer.isra.4();
+ 6)   0.019 us    |      __check_holder();
+ 6)               |      __add_holder() {
+ 6)   0.024 us    |        __find_holder();
+ 6)   0.357 us    |      }
+ 6)   0.024 us    |      dm_bm_validate_buffer.isra.4();
+ 6)               |      bl_up_read() {
+ 6)   0.025 us    |        __find_holder();
+ 6)   0.459 us    |      }
+ 6)               |      bl_up_read() {
+ 6)   0.025 us    |        __find_holder();
+ 6)   0.455 us    |      }
+ 6)   9.693 us    |      bio_detain.isra.26();
+ 6)               |      alloc_data_block.isra.42() {
+ 6)   0.095 us    |        sm_disk_get_nr_free();
+ 6)               |        sm_disk_new_block() {
+ 6)               |          disk_ll_load_ie() {
+ 6)   0.091 us    |            __check_holder();
+ 6)               |            __add_holder() {
+ 6)   0.023 us    |              __find_holder();
+ 6)   0.362 us    |            }
+ 6)   0.019 us    |            dm_bm_validate_buffer.isra.4();
+ 6)               |            bl_up_read() {
+ 6)   0.018 us    |              __find_holder();
+ 6)   0.504 us    |            }
+ 6)   3.755 us    |          }
+ 6)   0.089 us    |          __check_holder();
+ 6)               |          __add_holder() {
+ 6)   0.024 us    |            __find_holder();
+ 6)   0.317 us    |          }
+ 6)   0.024 us    |          dm_bm_validate_buffer.isra.4();
+ 6)   0.233 us    |          sm_lookup_bitmap();
+ 6)               |          bl_up_read() {
+ 6)   0.019 us    |            __find_holder();
+ 6)   0.448 us    |          }
+ 6)               |          sm_ll_mutate() {
+ 6)               |            disk_ll_load_ie() {
+ 6)   0.020 us    |              __check_holder();
+ 6)               |              __add_holder() {
+ 6)   0.019 us    |                __find_holder();
+ 6)   0.318 us    |              }
+ 6)   0.025 us    |              dm_bm_validate_buffer.isra.4();
+ 6)               |              bl_up_read() {
+ 6)   0.024 us    |                __find_holder();
+ 6)   0.440 us    |              }
+ 6)   2.821 us    |            }
+ 6)               |            sm_metadata_count_is_more_than_one() {
+ 6)   0.083 us    |              metadata_ll_load_ie();
+ 6)   0.091 us    |              __check_holder();
+ 6)               |              __add_holder() {
+ 6)   0.018 us    |                __find_holder();
+ 6)   0.318 us    |              }
+ 6)   0.086 us    |              dm_bm_validate_buffer.isra.4();
+ 6)   0.161 us    |              sm_lookup_bitmap();
+ 6)               |              bl_up_read() {
+ 6)   0.019 us    |                __find_holder();
+ 6)   0.433 us    |              }
+ 6)   4.007 us    |            }
+ 6)               |            sm_metadata_new_block() {
+ 6)   0.101 us    |              metadata_ll_load_ie();
+ 6)   0.025 us    |              __check_holder();
+ 6)               |              __add_holder() {
+ 6)   0.019 us    |                __find_holder();
+ 6)   0.314 us    |              }
+ 6)   0.025 us    |              dm_bm_validate_buffer.isra.4();
+ 6)   0.020 us    |              sm_lookup_bitmap();
+ 6)   0.025 us    |              sm_lookup_bitmap();
+ 6)   0.025 us    |              sm_lookup_bitmap();
+ 6)   0.019 us    |              sm_lookup_bitmap();
+ 6)   0.020 us    |              sm_lookup_bitmap();
+ 6)   0.026 us    |              sm_lookup_bitmap();
+ 6)   0.025 us    |              sm_lookup_bitmap();
+ 6)   0.024 us    |              sm_lookup_bitmap();
+ 6)   0.020 us    |              sm_lookup_bitmap();
+ 6)   0.020 us    |              sm_lookup_bitmap();
+ 6)   0.026 us    |              sm_lookup_bitmap();
+ 6)   0.017 us    |              sm_lookup_bitmap();
+ 6)   0.018 us    |              sm_lookup_bitmap();
+ 6)   0.020 us    |              sm_lookup_bitmap();
+ 6)   0.019 us    |              sm_lookup_bitmap();
+ 6)   0.019 us    |              sm_lookup_bitmap();
+ 6)   0.025 us    |              sm_lookup_bitmap();
+ 6)   0.019 us    |              sm_lookup_bitmap();
+ 6)   0.025 us    |              sm_lookup_bitmap();
+ 6)   0.025 us    |              sm_lookup_bitmap();
+ 6)   0.018 us    |              sm_lookup_bitmap();
+ 6)   0.025 us    |              sm_lookup_bitmap();
+ 6)   0.025 us    |              sm_lookup_bitmap();
+ 6)   0.018 us    |              sm_lookup_bitmap();
+ 6)   0.024 us    |              sm_lookup_bitmap();
+ 6)   0.019 us    |              sm_lookup_bitmap();
+ 6)   0.025 us    |              sm_lookup_bitmap();
+ 6)   0.020 us    |              sm_lookup_bitmap();
+ 6)   0.025 us    |              sm_lookup_bitmap();
+ 6)   0.018 us    |              sm_lookup_bitmap();
+ 6)   0.020 us    |              sm_lookup_bitmap();
+ 6)   0.024 us    |              sm_lookup_bitmap();
+ 6)   0.018 us    |              sm_lookup_bitmap();
+ 6)   0.018 us    |              sm_lookup_bitmap();
+ 6)   0.024 us    |              sm_lookup_bitmap();
+ 6)               |              bl_up_read() {
+ 6)   0.025 us    |                __find_holder();
+ 6)   0.435 us    |              }
+ 6)               |              sm_ll_mutate() {
+ 6)   0.019 us    |                metadata_ll_load_ie();
+ 6)               |                sm_metadata_count_is_more_than_one() {
+ 6)   0.024 us    |                  metadata_ll_load_ie();
+ 6)   0.019 us    |                  __check_holder();
+ 6)               |                  __add_holder() {
+ 6)   0.018 us    |                    __find_holder();
+ 6)   0.310 us    |                  }
+ 6)   0.023 us    |                  dm_bm_validate_buffer.isra.4();
+ 6)   0.019 us    |                  sm_lookup_bitmap();
+ 6)               |                  bl_up_read() {
+ 6)   0.025 us    |                    __find_holder();
+ 6)   0.413 us    |                  }
+ 6)   3.152 us    |                }
+ 6)               |                sm_metadata_new_block() {
+ 6)   0.026 us    |                  metadata_ll_load_ie();
+ 6)   0.025 us    |                  __check_holder();
+ 6)               |                  __add_holder() {
+ 6)   0.023 us    |                    __find_holder();
+ 6)   0.299 us    |                  }
+ 6)   0.024 us    |                  dm_bm_validate_buffer.isra.4();
+ 6)   0.025 us    |                  sm_lookup_bitmap();
+ 6)   0.020 us    |                  sm_lookup_bitmap();
+ 6)   0.026 us    |                  sm_lookup_bitmap();
+ 6)   0.025 us    |                  sm_lookup_bitmap();
+ 6)   0.019 us    |                  sm_lookup_bitmap();
+ 6)   0.025 us    |                  sm_lookup_bitmap();
+ 6)               |                  bl_up_read() {
+ 6)   0.018 us    |                    __find_holder();
+ 6)   0.424 us    |                  }
+ 6)   0.033 us    |                  add_bop();
+ 6)   5.132 us    |                }
+ 6)               |                sm_metadata_dec_block() {
+ 6)   0.028 us    |                  add_bop();
+ 6)   0.322 us    |                }
+ 6)   0.019 us    |                __check_holder();
+ 6)               |                __add_holder() {
+ 6)   0.019 us    |                  __find_holder();
+ 6)   0.507 us    |                }
+ 6)   0.018 us    |                dm_bm_validate_buffer.isra.4();
+ 6)               |                bl_down_write() {
+ 6)   0.082 us    |                  __check_holder();
+ 6)               |                  __add_holder() {
+ 6)   0.025 us    |                    __find_holder();
+ 6)   0.314 us    |                  }
+ 6)   1.240 us    |                }
+ 6)               |                bl_up_read() {
+ 6)   0.019 us    |                  __find_holder();
+ 6)   0.433 us    |                }
+ 6) + 12.801 us   |                insert_shadow();
+ 6)   0.028 us    |                sm_lookup_bitmap();
+ 6)   0.025 us    |                inc_ref_count();
+ 6)               |                bl_up_write() {
+ 6)   0.019 us    |                  __find_holder();
+ 6)   0.467 us    |                }
+ 6)   0.026 us    |                metadata_ll_save_ie();
+ 6) + 31.406 us   |              }
+ 6)               |              out() {
+ 6)               |                sm_ll_mutate() {
+ 6)   0.025 us    |                  metadata_ll_load_ie();
+ 6)               |                  sm_metadata_count_is_more_than_one() {
+ 6)   0.026 us    |                    metadata_ll_load_ie();
+ 6)   0.017 us    |                    __check_holder();
+ 6)               |                    __add_holder() {
+ 6)   0.024 us    |                      __find_holder();
+ 6)   0.328 us    |                    }
+ 6)   0.024 us    |                    dm_bm_validate_buffer.isra.4();
+ 6)   0.019 us    |                    sm_lookup_bitmap();
+ 6)               |                    bl_up_read() {
+ 6)   0.018 us    |                      __find_holder();
+ 6)   0.441 us    |                    }
+ 6)   3.414 us    |                  }
+ 6)               |                  bl_down_write() {
+ 6)   0.020 us    |                    __check_holder();
+ 6)               |                    __add_holder() {
+ 6)   0.019 us    |                      __find_holder();
+ 6)   0.317 us    |                    }
+ 6)   1.028 us    |                  }
+ 6)   0.019 us    |                  dm_bm_validate_buffer.isra.4();
+ 6)   0.018 us    |                  sm_lookup_bitmap();
+ 6)   0.018 us    |                  inc_ref_count();
+ 6)               |                  bl_up_write() {
+ 6)   0.018 us    |                    __find_holder();
+ 6)   0.433 us    |                  }
+ 6)   0.022 us    |                  metadata_ll_save_ie();
+ 6)   8.290 us    |                }
+ 6)               |                sm_ll_mutate() {
+ 6)   0.018 us    |                  metadata_ll_load_ie();
+ 6)               |                  sm_metadata_count_is_more_than_one() {
+ 6)   0.019 us    |                    metadata_ll_load_ie();
+ 6)   0.025 us    |                    __check_holder();
+ 6)               |                    __add_holder() {
+ 6)   0.018 us    |                      __find_holder();
+ 6)   0.308 us    |                    }
+ 6)   0.020 us    |                    dm_bm_validate_buffer.isra.4();
+ 6)   0.025 us    |                    sm_lookup_bitmap();
+ 6)               |                    bl_up_read() {
+ 6)   0.024 us    |                      __find_holder();
+ 6)   0.433 us    |                    }
+ 6)   3.271 us    |                  }
+ 6)               |                  bl_down_write() {
+ 6)   0.024 us    |                    __check_holder();
+ 6)               |                    __add_holder() {
+ 6)   0.024 us    |                      __find_holder();
+ 6)   0.371 us    |                    }
+ 6)   1.149 us    |                  }
+ 6)   0.024 us    |                  dm_bm_validate_buffer.isra.4();
+ 6)   0.024 us    |                  sm_lookup_bitmap();
+ 6)   0.028 us    |                  dec_ref_count();
+ 6)               |                  bl_up_write() {
+ 6)   0.025 us    |                    __find_holder();
+ 6)   0.424 us    |                  }
+ 6)   0.021 us    |                  metadata_ll_save_ie();
+ 6)   8.504 us    |                }
+ 6) + 17.492 us   |              }
+ 6) + 62.789 us   |            }
+ 6)               |            sm_metadata_dec_block() {
+ 6)               |              sm_ll_mutate() {
+ 6)   0.020 us    |                metadata_ll_load_ie();
+ 6)               |                sm_metadata_count_is_more_than_one() {
+ 6)   0.020 us    |                  metadata_ll_load_ie();
+ 6)   0.024 us    |                  __check_holder();
+ 6)               |                  __add_holder() {
+ 6)   0.025 us    |                    __find_holder();
+ 6)   0.317 us    |                  }
+ 6)   0.018 us    |                  dm_bm_validate_buffer.isra.4();
+ 6)   0.019 us    |                  sm_lookup_bitmap();
+ 6)               |                  bl_up_read() {
+ 6)   0.024 us    |                    __find_holder();
+ 6)   0.425 us    |                  }
+ 6)   3.251 us    |                }
+ 6)               |                bl_down_write() {
+ 6)   0.025 us    |                  __check_holder();
+ 6)               |                  __add_holder() {
+ 6)   0.024 us    |                    __find_holder();
+ 6)   0.313 us    |                  }
+ 6)   1.017 us    |                }
+ 6)   0.019 us    |                dm_bm_validate_buffer.isra.4();
+ 6)   0.021 us    |                sm_lookup_bitmap();
+ 6)   0.020 us    |                dec_ref_count();
+ 6)               |                bl_up_write() {
+ 6)   0.018 us    |                  __find_holder();
+ 6)   0.428 us    |                }
+ 6)   0.021 us    |                metadata_ll_save_ie();
+ 6)   7.981 us    |              }
+ 6)   0.040 us    |              out();
+ 6)   8.585 us    |            }
+ 6)   0.024 us    |            __check_holder();
+ 6)               |            __add_holder() {
+ 6)   0.024 us    |              __find_holder();
+ 6)   0.320 us    |            }
+ 6)   0.026 us    |            dm_bm_validate_buffer.isra.4();
+ 6)               |            bl_down_write() {
+ 6)   0.089 us    |              __check_holder();
+ 6)               |              __add_holder() {
+ 6)   0.017 us    |                __find_holder();
+ 6)   0.317 us    |              }
+ 6)   1.145 us    |            }
+ 6)               |            bl_up_read() {
+ 6)   0.018 us    |              __find_holder();
+ 6)   0.433 us    |            }
+ 6) + 10.206 us   |            insert_shadow();
+ 6)   0.025 us    |            sm_lookup_bitmap();
+ 6)   0.019 us    |            inc_ref_count();
+ 6)               |            bl_up_write() {
+ 6)   0.024 us    |              __find_holder();
+ 6)   0.440 us    |            }
+ 6)               |            disk_ll_save_ie() {
+ 6)               |              insert() {
+ 6)               |                btree_insert_raw() {
+ 6)               |                  sm_metadata_count_is_more_than_one() {
+ 6)   0.025 us    |                    metadata_ll_load_ie();
+ 6)   0.018 us    |                    __check_holder();
+ 6)               |                    __add_holder() {
+ 6)   0.018 us    |                      __find_holder();
+ 6)   0.372 us    |                    }
+ 6)   0.018 us    |                    dm_bm_validate_buffer.isra.4();
+ 6)   0.027 us    |                    sm_lookup_bitmap();
+ 6)               |                    bl_up_read() {
+ 6)   0.023 us    |                      __find_holder();
+ 6)   0.434 us    |                    }
+ 6)   3.650 us    |                  }
+ 6)               |                  sm_metadata_new_block() {
+ 6)   0.034 us    |                    metadata_ll_load_ie();
+ 6)   0.025 us    |                    __check_holder();
+ 6)               |                    __add_holder() {
+ 6)   0.024 us    |                      __find_holder();
+ 6)   0.303 us    |                    }
+ 6)   0.019 us    |                    dm_bm_validate_buffer.isra.4();
+ 6)   0.027 us    |                    sm_lookup_bitmap();
+ 6)   0.025 us    |                    sm_lookup_bitmap();
+ 6)   0.018 us    |                    sm_lookup_bitmap();
+ 6)   0.018 us    |                    sm_lookup_bitmap();
+ 6)   0.020 us    |                    sm_lookup_bitmap();
+ 6)   0.018 us    |                    sm_lookup_bitmap();
+ 6)   0.025 us    |                    sm_lookup_bitmap();
+ 6)   0.024 us    |                    sm_lookup_bitmap();
+ 6)   0.020 us    |                    sm_lookup_bitmap();
+ 6)   0.019 us    |                    sm_lookup_bitmap();
+ 6)   0.025 us    |                    sm_lookup_bitmap();
+ 6)   0.025 us    |                    sm_lookup_bitmap();
+ 6)   0.025 us    |                    sm_lookup_bitmap();
+ 6)   0.019 us    |                    sm_lookup_bitmap();
+ 6)   0.019 us    |                    sm_lookup_bitmap();
+ 6)   0.020 us    |                    sm_lookup_bitmap();
+ 6)   0.019 us    |                    sm_lookup_bitmap();
+ 6)   0.025 us    |                    sm_lookup_bitmap();
+ 6)   0.025 us    |                    sm_lookup_bitmap();
+ 6)               |                    bl_up_read() {
+ 6)   0.025 us    |                      __find_holder();
+ 6)   0.437 us    |                    }
+ 6)               |                    sm_ll_mutate() {
+ 6)   0.025 us    |                      metadata_ll_load_ie();
+ 6)               |                      sm_metadata_count_is_more_than_one() {
+ 6)   0.025 us    |                        metadata_ll_load_ie();
+ 6)   0.018 us    |                        __check_holder();
+ 6)               |                        __add_holder() {
+ 6)   0.019 us    |                          __find_holder();
+ 6)   0.321 us    |                        }
+ 6)   0.020 us    |                        dm_bm_validate_buffer.isra.4();
+ 6)   0.025 us    |                        sm_lookup_bitmap();
+ 6)               |                        bl_up_read() {
+ 6)   0.025 us    |                          __find_holder();
+ 6)   0.425 us    |                        }
+ 6)   3.362 us    |                      }
+ 6)               |                      bl_down_write() {
+ 6)   0.024 us    |                        __check_holder();
+ 6)               |                        __add_holder() {
+ 6)   0.023 us    |                          __find_holder();
+ 6)   0.313 us    |                        }
+ 6)   1.036 us    |                      }
+ 6)   0.019 us    |                      dm_bm_validate_buffer.isra.4();
+ 6)   0.028 us    |                      sm_lookup_bitmap();
+ 6)   0.025 us    |                      inc_ref_count();
+ 6)               |                      bl_up_write() {
+ 6)   0.024 us    |                        __find_holder();
+ 6)   0.485 us    |                      }
+ 6)   0.027 us    |                      metadata_ll_save_ie();
+ 6)   8.417 us    |                    }
+ 6)   0.022 us    |                    out();
+ 6) + 17.230 us   |                  }
+ 6)               |                  sm_metadata_dec_block() {
+ 6)               |                    sm_ll_mutate() {
+ 6)   0.026 us    |                      metadata_ll_load_ie();
+ 6)               |                      sm_metadata_count_is_more_than_one() {
+ 6)   0.019 us    |                        metadata_ll_load_ie();
+ 6)   0.018 us    |                        __check_holder();
+ 6)               |                        __add_holder() {
+ 6)   0.018 us    |                          __find_holder();
+ 6)   0.305 us    |                        }
+ 6)   0.025 us    |                        dm_bm_validate_buffer.isra.4();
+ 6)   0.030 us    |                        sm_lookup_bitmap();
+ 6)               |                        bl_up_read() {
+ 6)   0.019 us    |                          __find_holder();
+ 6)   0.426 us    |                        }
+ 6)   3.204 us    |                      }
+ 6)               |                      bl_down_write() {
+ 6)   0.019 us    |                        __check_holder();
+ 6)               |                        __add_holder() {
+ 6)   0.017 us    |                          __find_holder();
+ 6)   0.305 us    |                        }
+ 6)   1.004 us    |                      }
+ 6)   0.024 us    |                      dm_bm_validate_buffer.isra.4();
+ 6)   0.028 us    |                      sm_lookup_bitmap();
+ 6)   0.024 us    |                      dec_ref_count();
+ 6)               |                      bl_up_write() {
+ 6)   0.025 us    |                        __find_holder();
+ 6)   0.417 us    |                      }
+ 6)   0.027 us    |                      metadata_ll_save_ie();
+ 6)   7.882 us    |                    }
+ 6)   0.021 us    |                    out();
+ 6)   8.429 us    |                  }
+ 6)   0.024 us    |                  __check_holder();
+ 6)               |                  __add_holder() {
+ 6)   0.018 us    |                    __find_holder();
+ 6)   0.306 us    |                  }
+ 6)   0.024 us    |                  dm_bm_validate_buffer.isra.4();
+ 6)               |                  bl_down_write() {
+ 6)   0.082 us    |                    __check_holder();
+ 6)               |                    __add_holder() {
+ 6)   0.024 us    |                      __find_holder();
+ 6)   0.300 us    |                    }
+ 6)   1.117 us    |                  }
+ 6)               |                  bl_up_read() {
+ 6)   0.025 us    |                    __find_holder();
+ 6)   0.423 us    |                  }
+ 6) + 12.185 us   |                  insert_shadow();
+ 6) + 48.439 us   |                }
+ 6)               |                bl_up_write() {
+ 6)   0.025 us    |                  __find_holder();
+ 6)   0.443 us    |                }
+ 6) + 50.498 us   |              }
+ 6) + 51.108 us   |            }
+ 6) ! 149.380 us  |          }
+ 6) ! 157.865 us  |        }
+ 6) ! 159.301 us  |      }
+ 6)               |      schedule_copy.isra.38() {
+ 6)   0.138 us    |        get_next_mapping.isra.32();
+ 6) + 16.839 us   |      }
+ 6)               |      cell_defer_no_holder() {
+ 6)   1.367 us    |        wake_worker();
+ 6)   6.810 us    |      }
+ 6) ! 218.144 us  |    }
+ 6)   0.021 us    |    thin_put();
+ 6) ! 224.472 us  |  }
+ 6)               |  do_worker() {
+ 6)   0.179 us    |    process_prepared();
+ 6)   0.159 us    |    process_prepared();
+ 6)   0.027 us    |    thin_put();
+ 6)   0.027 us    |    thin_put();
+ 6)   0.026 us    |    thin_put();
+ 6)   2.744 us    |  }
+ ------------------------------------------
+ 6)   kworker-6    =>   kworker-57  
+ ------------------------------------------
+
+ 6)   0.814 us    |  pool_merge();
+ 6)   0.168 us    |  pool_merge();
+ 6)   0.217 us    |  pool_merge();
+ 6)   0.171 us    |  pool_merge();
+ 6)   0.145 us    |  pool_merge();
+ 6)   0.155 us    |  pool_merge();
+ 6)   0.158 us    |  pool_merge();
+ 6)   0.157 us    |  pool_merge();
+ 6)   0.158 us    |  pool_merge();
+ 6)   0.158 us    |  pool_merge();
+ 6)   0.159 us    |  pool_merge();
+ 6)   0.165 us    |  pool_merge();
+ 6)   0.158 us    |  pool_merge();
+ 6)   0.157 us    |  pool_merge();
+ 6)   0.192 us    |  pool_merge();
+ 6)   0.170 us    |  pool_merge();
+ 6)   0.370 us    |  pool_map();
+ 6)   0.610 us    |  pool_merge();
+ 6)   0.178 us    |  pool_merge();
+ 6)   0.164 us    |  pool_merge();
+ 6)   0.159 us    |  pool_merge();
+ 6)   0.161 us    |  pool_merge();
+ 6)   0.160 us    |  pool_merge();
+ 6)   0.159 us    |  pool_merge();
+ 6)   0.159 us    |  pool_merge();
+ 6)   0.159 us    |  pool_merge();
+ 6)   0.159 us    |  pool_merge();
+ 6)   0.158 us    |  pool_merge();
+ 6)   0.158 us    |  pool_merge();
+ 6)   0.157 us    |  pool_merge();
+ 6)   0.159 us    |  pool_merge();
+ 6)   0.157 us    |  pool_merge();
+ 6)   0.157 us    |  pool_merge();
+ 6)   0.241 us    |  pool_map();
+ 7)               |  copy_complete() {
+ 7)               |    __maybe_add_mapping() {
+ 7)   3.017 us    |      wake_worker();
+ 7)   3.534 us    |    }
+ 7)   4.276 us    |  }
+ ------------------------------------------
+ 7)   kworker-58   =>   kworker-74  
+ ------------------------------------------
+
+ 7)               |  do_worker() {
+ 7)               |    process_prepared() {
+ 7)               |      process_prepared_mapping() {
+ 7)               |        insert() {
+ 7)               |          btree_insert_raw() {
+ 7)               |            sm_metadata_count_is_more_than_one() {
+ 7)   0.032 us    |              metadata_ll_load_ie();
+ 7)   0.053 us    |              __check_holder();
+ 7)               |              __add_holder() {
+ 7)   0.032 us    |                __find_holder();
+ 7)   0.326 us    |              }
+ 7)   0.039 us    |              dm_bm_validate_buffer.isra.4();
+ 7)   0.045 us    |              sm_lookup_bitmap();
+ 7)               |              bl_up_read() {
+ 7)   0.024 us    |                __find_holder();
+ 7)   0.472 us    |              }
+ 7)   4.688 us    |            }
+ 7)               |            sm_metadata_new_block() {
+ 7)   0.027 us    |              metadata_ll_load_ie();
+ 7)   0.027 us    |              __check_holder();
+ 7)               |              __add_holder() {
+ 7)   0.023 us    |                __find_holder();
+ 7)   0.294 us    |              }
+ 7)   0.026 us    |              dm_bm_validate_buffer.isra.4();
+ 7)   0.039 us    |              sm_lookup_bitmap();
+ 7)   0.024 us    |              sm_lookup_bitmap();
+ 7)               |              bl_up_read() {
+ 7)   0.025 us    |                __find_holder();
+ 7)   0.414 us    |              }
+ 7)               |              sm_ll_mutate() {
+ 7)   0.019 us    |                metadata_ll_load_ie();
+ 7)               |                sm_metadata_count_is_more_than_one() {
+ 7)   0.021 us    |                  metadata_ll_load_ie();
+ 7)   0.023 us    |                  __check_holder();
+ 7)               |                  __add_holder() {
+ 7)   0.018 us    |                    __find_holder();
+ 7)   0.304 us    |                  }
+ 7)   0.018 us    |                  dm_bm_validate_buffer.isra.4();
+ 7)   0.023 us    |                  sm_lookup_bitmap();
+ 7)               |                  bl_up_read() {
+ 7)   0.024 us    |                    __find_holder();
+ 7)   0.413 us    |                  }
+ 7)   3.154 us    |                }
+ 7)               |                bl_down_write() {
+ 7)   0.018 us    |                  __check_holder();
+ 7)               |                  __add_holder() {
+ 7)   0.019 us    |                    __find_holder();
+ 7)   0.300 us    |                  }
+ 7)   0.997 us    |                }
+ 7)   0.024 us    |                dm_bm_validate_buffer.isra.4();
+ 7)   0.025 us    |                sm_lookup_bitmap();
+ 7)   0.025 us    |                inc_ref_count();
+ 7)               |                bl_up_write() {
+ 7)   0.024 us    |                  __find_holder();
+ 7)   0.439 us    |                }
+ 7)   0.025 us    |                metadata_ll_save_ie();
+ 7)   8.005 us    |              }
+ 7)   0.042 us    |              out();
+ 7) + 12.323 us   |            }
+ 7)               |            sm_metadata_dec_block() {
+ 7)               |              sm_ll_mutate() {
+ 7)   0.026 us    |                metadata_ll_load_ie();
+ 7)               |                sm_metadata_count_is_more_than_one() {
+ 7)   0.026 us    |                  metadata_ll_load_ie();
+ 7)   0.020 us    |                  __check_holder();
+ 7)               |                  __add_holder() {
+ 7)   0.024 us    |                    __find_holder();
+ 7)   0.493 us    |                  }
+ 7)   0.025 us    |                  dm_bm_validate_buffer.isra.4();
+ 7)   0.024 us    |                  sm_lookup_bitmap();
+ 7)               |                  bl_up_read() {
+ 7)   0.022 us    |                    __find_holder();
+ 7)   0.438 us    |                  }
+ 7)   3.450 us    |                }
+ 7)               |                bl_down_write() {
+ 7)   0.018 us    |                  __check_holder();
+ 7)               |                  __add_holder() {
+ 7)   0.023 us    |                    __find_holder();
+ 7)   0.309 us    |                  }
+ 7)   1.023 us    |                }
+ 7)   0.018 us    |                dm_bm_validate_buffer.isra.4();
+ 7)   0.020 us    |                sm_lookup_bitmap();
+ 7)   0.028 us    |                dec_ref_count();
+ 7)               |                bl_up_write() {
+ 7)   0.024 us    |                  __find_holder();
+ 7)   0.418 us    |                }
+ 7)   0.018 us    |                metadata_ll_save_ie();
+ 7)   8.219 us    |              }
+ 7)   0.027 us    |              out();
+ 7)   8.783 us    |            }
+ 7)   0.026 us    |            __check_holder();
+ 7)               |            __add_holder() {
+ 7)   0.022 us    |              __find_holder();
+ 7)   0.317 us    |            }
+ 7)   0.019 us    |            dm_bm_validate_buffer.isra.4();
+ 7)               |            bl_down_write() {
+ 7)   0.191 us    |              __check_holder();
+ 7)               |              __add_holder() {
+ 7)   0.023 us    |                __find_holder();
+ 7)   0.306 us    |              }
+ 7)   1.311 us    |            }
+ 7)               |            bl_up_read() {
+ 7)   0.024 us    |              __find_holder();
+ 7)   0.471 us    |            }
+ 7) + 13.080 us   |            insert_shadow();
+ 7) + 46.020 us   |          }
+ 7)               |          btree_insert_raw() {
+ 7)               |            sm_metadata_count_is_more_than_one() {
+ 7)   0.025 us    |              metadata_ll_load_ie();
+ 7)   0.018 us    |              __check_holder();
+ 7)               |              __add_holder() {
+ 7)   0.017 us    |                __find_holder();
+ 7)   0.315 us    |              }
+ 7)   0.024 us    |              dm_bm_validate_buffer.isra.4();
+ 7)   0.032 us    |              sm_lookup_bitmap();
+ 7)               |              bl_up_read() {
+ 7)   0.017 us    |                __find_holder();
+ 7)   0.458 us    |              }
+ 7)   3.392 us    |            }
+ 7)               |            sm_metadata_new_block() {
+ 7)   0.020 us    |              metadata_ll_load_ie();
+ 7)   0.023 us    |              __check_holder();
+ 7)               |              __add_holder() {
+ 7)   0.017 us    |                __find_holder();
+ 7)   0.318 us    |              }
+ 7)   0.024 us    |              dm_bm_validate_buffer.isra.4();
+ 7)   0.024 us    |              sm_lookup_bitmap();
+ 7)   0.025 us    |              sm_lookup_bitmap();
+ 7)               |              bl_up_read() {
+ 7)   0.025 us    |                __find_holder();
+ 7)   0.440 us    |              }
+ 7)               |              sm_ll_mutate() {
+ 7)   0.026 us    |                metadata_ll_load_ie();
+ 7)               |                sm_metadata_count_is_more_than_one() {
+ 7)   0.024 us    |                  metadata_ll_load_ie();
+ 7)   0.023 us    |                  __check_holder();
+ 7)               |                  __add_holder() {
+ 7)   0.023 us    |                    __find_holder();
+ 7)   0.297 us    |                  }
+ 7)   0.024 us    |                  dm_bm_validate_buffer.isra.4();
+ 7)   0.029 us    |                  sm_lookup_bitmap();
+ 7)               |                  bl_up_read() {
+ 7)   0.019 us    |                    __find_holder();
+ 7)   0.416 us    |                  }
+ 7)   3.381 us    |                }
+ 7)               |                bl_down_write() {
+ 7)   0.024 us    |                  __check_holder();
+ 7)               |                  __add_holder() {
+ 7)   0.019 us    |                    __find_holder();
+ 7)   0.329 us    |                  }
+ 7)   0.993 us    |                }
+ 7)   0.025 us    |                dm_bm_validate_buffer.isra.4();
+ 7)   0.024 us    |                sm_lookup_bitmap();
+ 7)   0.019 us    |                inc_ref_count();
+ 7)               |                bl_up_write() {
+ 7)   0.024 us    |                  __find_holder();
+ 7)   0.415 us    |                }
+ 7)   0.018 us    |                metadata_ll_save_ie();
+ 7)   8.022 us    |              }
+ 7)   0.023 us    |              out();
+ 7) + 12.250 us   |            }
+ 7)               |            sm_metadata_dec_block() {
+ 7)               |              sm_ll_mutate() {
+ 7)   0.019 us    |                metadata_ll_load_ie();
+ 7)               |                sm_metadata_count_is_more_than_one() {
+ 7)   0.020 us    |                  metadata_ll_load_ie();
+ 7)   0.020 us    |                  __check_holder();
+ 7)               |                  __add_holder() {
+ 7)   0.023 us    |                    __find_holder();
+ 7)   0.293 us    |                  }
+ 7)   0.018 us    |                  dm_bm_validate_buffer.isra.4();
+ 7)   0.024 us    |                  sm_lookup_bitmap();
+ 7)               |                  bl_up_read() {
+ 7)   0.024 us    |                    __find_holder();
+ 7)   0.413 us    |                  }
+ 7)   3.143 us    |                }
+ 7)               |                bl_down_write() {
+ 7)   0.023 us    |                  __check_holder();
+ 7)               |                  __add_holder() {
+ 7)   0.018 us    |                    __find_holder();
+ 7)   0.296 us    |                  }
+ 7)   0.964 us    |                }
+ 7)   0.024 us    |                dm_bm_validate_buffer.isra.4();
+ 7)   0.025 us    |                sm_lookup_bitmap();
+ 7)   0.026 us    |                dec_ref_count();
+ 7)               |                bl_up_write() {
+ 7)   0.024 us    |                  __find_holder();
+ 7)   0.412 us    |                }
+ 7)   0.026 us    |                metadata_ll_save_ie();
+ 7)   7.705 us    |              }
+ 7)   0.027 us    |              out();
+ 7)   8.237 us    |            }
+ 7)   0.021 us    |            __check_holder();
+ 7)               |            __add_holder() {
+ 7)   0.023 us    |              __find_holder();
+ 7)   0.298 us    |            }
+ 7)   0.024 us    |            dm_bm_validate_buffer.isra.4();
+ 7)               |            bl_down_write() {
+ 7)   0.086 us    |              __check_holder();
+ 7)               |              __add_holder() {
+ 7)   0.023 us    |                __find_holder();
+ 7)   0.293 us    |              }
+ 7)   1.168 us    |            }
+ 7)               |            bl_up_read() {
+ 7)   0.018 us    |              __find_holder();
+ 7)   0.432 us    |            }
+ 7) + 11.234 us   |            insert_shadow();
+ 7)               |            data_block_inc() {
+ 7)               |              sm_disk_inc_block() {
+ 7)               |                sm_ll_mutate() {
+ 7)               |                  disk_ll_load_ie() {
+ 7)   0.018 us    |                    __check_holder();
+ 7)               |                    __add_holder() {
+ 7)   0.022 us    |                      __find_holder();
+ 7)   0.294 us    |                    }
+ 7)   0.024 us    |                    dm_bm_validate_buffer.isra.4();
+ 7)               |                    bl_up_read() {
+ 7)   0.019 us    |                      __find_holder();
+ 7)   0.482 us    |                    }
+ 7)   3.110 us    |                  }
+ 7)               |                  sm_metadata_count_is_more_than_one() {
+ 7)   0.020 us    |                    metadata_ll_load_ie();
+ 7)   0.025 us    |                    __check_holder();
+ 7)               |                    __add_holder() {
+ 7)   0.017 us    |                      __find_holder();
+ 7)   0.302 us    |                    }
+ 7)   0.019 us    |                    dm_bm_validate_buffer.isra.4();
+ 7)   0.032 us    |                    sm_lookup_bitmap();
+ 7)               |                    bl_up_read() {
+ 7)   0.017 us    |                      __find_holder();
+ 7)   0.417 us    |                    }
+ 7)   3.191 us    |                  }
+ 7)               |                  bl_down_write() {
+ 7)   0.020 us    |                    __check_holder();
+ 7)               |                    __add_holder() {
+ 7)   0.024 us    |                      __find_holder();
+ 7)   0.295 us    |                    }
+ 7)   0.970 us    |                  }
+ 7)   0.019 us    |                  dm_bm_validate_buffer.isra.4();
+ 7)   0.029 us    |                  sm_lookup_bitmap();
+ 7)   0.020 us    |                  inc_ref_count();
+ 7)               |                  bl_up_write() {
+ 7)   0.024 us    |                    __find_holder();
+ 7)   0.411 us    |                  }
+ 7)               |                  disk_ll_save_ie() {
+ 7)               |                    insert() {
+ 7)               |                      btree_insert_raw() {
+ 7)               |                        sm_metadata_count_is_more_than_one() {
+ 7)   0.019 us    |                          metadata_ll_load_ie();
+ 7)   0.024 us    |                          __check_holder();
+ 7)               |                          __add_holder() {
+ 7)   0.018 us    |                            __find_holder();
+ 7)   0.301 us    |                          }
+ 7)   0.025 us    |                          dm_bm_validate_buffer.isra.4();
+ 7)   0.020 us    |                          sm_lookup_bitmap();
+ 7)               |                          bl_up_read() {
+ 7)   0.023 us    |                            __find_holder();
+ 7)   0.413 us    |                          }
+ 7)   3.257 us    |                        }
+ 7)               |                        bl_down_write() {
+ 7)   0.023 us    |                          __check_holder();
+ 7)               |                          __add_holder() {
+ 7)   0.018 us    |                            __find_holder();
+ 7)   0.300 us    |                          }
+ 7)   0.977 us    |                        }
+ 7)   0.024 us    |                        dm_bm_validate_buffer.isra.4();
+ 7)   5.558 us    |                      }
+ 7)               |                      bl_up_write() {
+ 7)   0.018 us    |                        __find_holder();
+ 7)   0.415 us    |                      }
+ 7)   7.265 us    |                    }
+ 7)   7.555 us    |                  }
+ 7) + 18.454 us   |                }
+ 7) + 18.755 us   |              }
+ 7) + 19.049 us   |            }
+ 7) + 61.440 us   |          }
+ 7)   0.017 us    |          data_block_equal();
+ 7)               |          data_block_dec() {
+ 7)               |            sm_disk_dec_block() {
+ 7)               |              sm_ll_mutate() {
+ 7)               |                disk_ll_load_ie() {
+ 7)   0.025 us    |                  __check_holder();
+ 7)               |                  __add_holder() {
+ 7)   0.017 us    |                    __find_holder();
+ 7)   0.305 us    |                  }
+ 7)   0.019 us    |                  dm_bm_validate_buffer.isra.4();
+ 7)               |                  bl_up_read() {
+ 7)   0.024 us    |                    __find_holder();
+ 7)   0.415 us    |                  }
+ 7)   2.737 us    |                }
+ 7)               |                sm_metadata_count_is_more_than_one() {
+ 7)   0.026 us    |                  metadata_ll_load_ie();
+ 7)   0.024 us    |                  __check_holder();
+ 7)               |                  __add_holder() {
+ 7)   0.017 us    |                    __find_holder();
+ 7)   0.302 us    |                  }
+ 7)   0.024 us    |                  dm_bm_validate_buffer.isra.4();
+ 7)   0.020 us    |                  sm_lookup_bitmap();
+ 7)               |                  bl_up_read() {
+ 7)   0.025 us    |                    __find_holder();
+ 7)   0.416 us    |                  }
+ 7)   3.127 us    |                }
+ 7)               |                bl_down_write() {
+ 7)   0.018 us    |                  __check_holder();
+ 7)               |                  __add_holder() {
+ 7)   0.023 us    |                    __find_holder();
+ 7)   0.299 us    |                  }
+ 7)   0.978 us    |                }
+ 7)   0.020 us    |                dm_bm_validate_buffer.isra.4();
+ 7)   0.029 us    |                sm_lookup_bitmap();
+ 7)   0.025 us    |                dec_ref_count();
+ 7)               |                bl_up_write() {
+ 7)   0.024 us    |                  __find_holder();
+ 7)   0.410 us    |                }
+ 7)               |                disk_ll_save_ie() {
+ 7)               |                  insert() {
+ 7)               |                    btree_insert_raw() {
+ 7)               |                      sm_metadata_count_is_more_than_one() {
+ 7)   0.026 us    |                        metadata_ll_load_ie();
+ 7)   0.023 us    |                        __check_holder();
+ 7)               |                        __add_holder() {
+ 7)   0.018 us    |                          __find_holder();
+ 7)   0.304 us    |                        }
+ 7)   0.017 us    |                        dm_bm_validate_buffer.isra.4();
+ 7)   0.019 us    |                        sm_lookup_bitmap();
+ 7)               |                        bl_up_read() {
+ 7)   0.024 us    |                          __find_holder();
+ 7)   0.426 us    |                        }
+ 7)   3.144 us    |                      }
+ 7)               |                      bl_down_write() {
+ 7)   0.024 us    |                        __check_holder();
+ 7)               |                        __add_holder() {
+ 7)   0.018 us    |                          __find_holder();
+ 7)   0.298 us    |                        }
+ 7)   0.962 us    |                      }
+ 7)   0.025 us    |                      dm_bm_validate_buffer.isra.4();
+ 7)   5.349 us    |                    }
+ 7)               |                    bl_up_write() {
+ 7)   0.019 us    |                      __find_holder();
+ 7)   0.412 us    |                    }
+ 7)   6.954 us    |                  }
+ 7)   7.221 us    |                }
+ 7) + 17.577 us   |              }
+ 7) + 17.842 us   |            }
+ 7) + 18.128 us   |          }
+ 7)               |          bl_up_write() {
+ 7)   0.023 us    |            __find_holder();
+ 7)   0.421 us    |          }
+ 7)               |          bl_up_write() {
+ 7)   0.025 us    |            __find_holder();
+ 7)   0.604 us    |          }
+ 7) ! 129.976 us  |        }
+ 7) + 14.513 us   |        wake_worker();
+ 7) ! 157.532 us  |      }
+ 7) ! 158.357 us  |    }
+ 7)   0.226 us    |    process_prepared();
+ 7)   0.034 us    |    thin_put();
+ 7)   0.020 us    |    thin_put();
+ 7)               |    process_bio() {
+ 7)   9.902 us    |      bio_detain.isra.26();
+ 7)   0.033 us    |      __check_holder();
+ 7)               |      __add_holder() {
+ 7)   0.025 us    |        __find_holder();
+ 7)   0.368 us    |      }
+ 7)   0.019 us    |      dm_bm_validate_buffer.isra.4();
+ 7)   0.028 us    |      __check_holder();
+ 7)               |      __add_holder() {
+ 7)   0.017 us    |        __find_holder();
+ 7)   0.352 us    |      }
+ 7)   0.020 us    |      dm_bm_validate_buffer.isra.4();
+ 7)               |      bl_up_read() {
+ 7)   0.025 us    |        __find_holder();
+ 7)   0.418 us    |      }
+ 7)               |      bl_up_read() {
+ 7)   0.024 us    |        __find_holder();
+ 7)   0.418 us    |      }
+ 7)   0.335 us    |      inc_all_io_entry.isra.27();
+ 7)               |      cell_defer_no_holder() {
+ 7)   0.100 us    |        wake_worker();
+ 7)   4.678 us    |      }
+ 7)               |      remap_and_issue() {
+ 7)               |        issue() {
+ 7)   0.502 us    |          pool_map();
+ 7) + 49.812 us   |        }
+ 7) + 50.252 us   |      }
+ 7) + 72.712 us   |    }
+ 7)   0.076 us    |    thin_put();
+ 7)               |    commit() {
+ 7)               |      __commit_transaction() {
+ 7)               |        insert() {
+ 7)               |          btree_insert_raw() {
+ 7)               |            sm_metadata_count_is_more_than_one() {
+ 7)   0.026 us    |              metadata_ll_load_ie();
+ 7)   0.018 us    |              __check_holder();
+ 7)               |              __add_holder() {
+ 7)   0.017 us    |                __find_holder();
+ 7)   0.304 us    |              }
+ 7)   0.024 us    |              dm_bm_validate_buffer.isra.4();
+ 7)   0.033 us    |              sm_lookup_bitmap();
+ 7)               |              bl_up_read() {
+ 7)   0.024 us    |                __find_holder();
+ 7)   0.419 us    |              }
+ 7)   3.532 us    |            }
+ 7)               |            sm_metadata_new_block() {
+ 7)   0.026 us    |              metadata_ll_load_ie();
+ 7)   0.027 us    |              __check_holder();
+ 7)               |              __add_holder() {
+ 7)   0.018 us    |                __find_holder();
+ 7)   0.301 us    |              }
+ 7)   0.026 us    |              dm_bm_validate_buffer.isra.4();
+ 7)   0.040 us    |              sm_lookup_bitmap();
+ 7)               |              bl_up_read() {
+ 7)   0.018 us    |                __find_holder();
+ 7)   0.411 us    |              }
+ 7)               |              sm_ll_mutate() {
+ 7)   0.020 us    |                metadata_ll_load_ie();
+ 7)               |                sm_metadata_count_is_more_than_one() {
+ 7)   0.018 us    |                  metadata_ll_load_ie();
+ 7)   0.024 us    |                  __check_holder();
+ 7)               |                  __add_holder() {
+ 7)   0.018 us    |                    __find_holder();
+ 7)   0.358 us    |                  }
+ 7)   0.025 us    |                  dm_bm_validate_buffer.isra.4();
+ 7)   0.020 us    |                  sm_lookup_bitmap();
+ 7)               |                  bl_up_read() {
+ 7)   0.024 us    |                    __find_holder();
+ 7)   0.420 us    |                  }
+ 7)   3.458 us    |                }
+ 7)               |                bl_down_write() {
+ 7)   0.024 us    |                  __check_holder();
+ 7)               |                  __add_holder() {
+ 7)   0.017 us    |                    __find_holder();
+ 7)   0.298 us    |                  }
+ 7)   1.037 us    |                }
+ 7)   0.025 us    |                dm_bm_validate_buffer.isra.4();
+ 7)   0.023 us    |                sm_lookup_bitmap();
+ 7)   0.024 us    |                inc_ref_count();
+ 7)               |                bl_up_write() {
+ 7)   0.024 us    |                  __find_holder();
+ 7)   0.451 us    |                }
+ 7)   0.019 us    |                metadata_ll_save_ie();
+ 7)   8.284 us    |              }
+ 7)   0.022 us    |              out();
+ 7) + 12.111 us   |            }
+ 7)               |            sm_metadata_dec_block() {
+ 7)               |              sm_ll_mutate() {
+ 7)   0.023 us    |                metadata_ll_load_ie();
+ 7)               |                sm_metadata_count_is_more_than_one() {
+ 7)   0.018 us    |                  metadata_ll_load_ie();
+ 7)   0.019 us    |                  __check_holder();
+ 7)               |                  __add_holder() {
+ 7)   0.023 us    |                    __find_holder();
+ 7)   0.295 us    |                  }
+ 7)   0.024 us    |                  dm_bm_validate_buffer.isra.4();
+ 7)   0.025 us    |                  sm_lookup_bitmap();
+ 7)               |                  bl_up_read() {
+ 7)   0.024 us    |                    __find_holder();
+ 7)   0.418 us    |                  }
+ 7)   3.139 us    |                }
+ 7)               |                bl_down_write() {
+ 7)   0.024 us    |                  __check_holder();
+ 7)               |                  __add_holder() {
+ 7)   0.024 us    |                    __find_holder();
+ 7)   0.293 us    |                  }
+ 7)   0.997 us    |                }
+ 7)   0.019 us    |                dm_bm_validate_buffer.isra.4();
+ 7)   0.019 us    |                sm_lookup_bitmap();
+ 7)   0.018 us    |                dec_ref_count();
+ 7)               |                bl_up_write() {
+ 7)   0.018 us    |                  __find_holder();
+ 7)   0.424 us    |                }
+ 7)   0.024 us    |                metadata_ll_save_ie();
+ 7)   7.815 us    |              }
+ 7)   0.022 us    |              out();
+ 7)   8.358 us    |            }
+ 7)   0.026 us    |            __check_holder();
+ 7)               |            __add_holder() {
+ 7)   0.018 us    |              __find_holder();
+ 7)   0.299 us    |            }
+ 7)   0.024 us    |            dm_bm_validate_buffer.isra.4();
+ 7)               |            bl_down_write() {
+ 7)   0.079 us    |              __check_holder();
+ 7)               |              __add_holder() {
+ 7)   0.025 us    |                __find_holder();
+ 7)   0.295 us    |              }
+ 7)   1.116 us    |            }
+ 7)               |            bl_up_read() {
+ 7)   0.024 us    |              __find_holder();
+ 7)   0.597 us    |            }
+ 7) + 11.771 us   |            insert_shadow();
+ 7) + 42.766 us   |          }
+ 7)               |          bl_up_write() {
+ 7)   0.024 us    |            __find_holder();
+ 7)   0.461 us    |          }
+ 7) + 44.645 us   |        }
+ 7)   0.479 us    |        sm_disk_commit();
+ 7)               |        sm_metadata_commit() {
+ 7)               |          metadata_ll_commit() {
+ 7)               |            sm_metadata_count_is_more_than_one() {
+ 7)   0.018 us    |              metadata_ll_load_ie();
+ 7)   0.022 us    |              __check_holder();
+ 7)               |              __add_holder() {
+ 7)   0.018 us    |                __find_holder();
+ 7)   0.298 us    |              }
+ 7)   0.025 us    |              dm_bm_validate_buffer.isra.4();
+ 7)   0.032 us    |              sm_lookup_bitmap();
+ 7)               |              bl_up_read() {
+ 7)   0.024 us    |                __find_holder();
+ 7)   0.418 us    |              }
+ 7)   3.215 us    |            }
+ 7)               |            sm_metadata_new_block() {
+ 7)   0.017 us    |              metadata_ll_load_ie();
+ 7)   0.025 us    |              __check_holder();
+ 7)               |              __add_holder() {
+ 7)   0.018 us    |                __find_holder();
+ 7)   0.300 us    |              }
+ 7)   0.019 us    |              dm_bm_validate_buffer.isra.4();
+ 7)   0.018 us    |              sm_lookup_bitmap();
+ 7)               |              bl_up_read() {
+ 7)   0.018 us    |                __find_holder();
+ 7)   0.417 us    |              }
+ 7)               |              sm_ll_mutate() {
+ 7)   0.018 us    |                metadata_ll_load_ie();
+ 7)               |                sm_metadata_count_is_more_than_one() {
+ 7)   0.020 us    |                  metadata_ll_load_ie();
+ 7)   0.019 us    |                  __check_holder();
+ 7)               |                  __add_holder() {
+ 7)   0.017 us    |                    __find_holder();
+ 7)   0.292 us    |                  }
+ 7)   0.023 us    |                  dm_bm_validate_buffer.isra.4();
+ 7)   0.025 us    |                  sm_lookup_bitmap();
+ 7)               |                  bl_up_read() {
+ 7)   0.019 us    |                    __find_holder();
+ 7)   0.413 us    |                  }
+ 7)   3.182 us    |                }
+ 7)               |                bl_down_write() {
+ 7)   0.024 us    |                  __check_holder();
+ 7)               |                  __add_holder() {
+ 7)   0.018 us    |                    __find_holder();
+ 7)   0.301 us    |                  }
+ 7)   0.962 us    |                }
+ 7)   0.024 us    |                dm_bm_validate_buffer.isra.4();
+ 7)   0.022 us    |                sm_lookup_bitmap();
+ 7)   0.026 us    |                inc_ref_count();
+ 7)               |                bl_up_write() {
+ 7)   0.023 us    |                  __find_holder();
+ 7)   0.451 us    |                }
+ 7)   0.022 us    |                metadata_ll_save_ie();
+ 7) + 16.990 us   |              }
+ 7)   0.026 us    |              out();
+ 7) + 20.719 us   |            }
+ 7)               |            sm_metadata_dec_block() {
+ 7)               |              sm_ll_mutate() {
+ 7)   0.020 us    |                metadata_ll_load_ie();
+ 7)               |                sm_metadata_count_is_more_than_one() {
+ 7)   0.020 us    |                  metadata_ll_load_ie();
+ 7)   0.025 us    |                  __check_holder();
+ 7)               |                  __add_holder() {
+ 7)   0.021 us    |                    __find_holder();
+ 7)   0.310 us    |                  }
+ 7)   0.021 us    |                  dm_bm_validate_buffer.isra.4();
+ 7)   0.022 us    |                  sm_lookup_bitmap();
+ 7)               |                  bl_up_read() {
+ 7)   0.023 us    |                    __find_holder();
+ 7)   0.433 us    |                  }
+ 7)   3.430 us    |                }
+ 7)               |                bl_down_write() {
+ 7)   0.022 us    |                  __check_holder();
+ 7)               |                  __add_holder() {
+ 7)   0.021 us    |                    __find_holder();
+ 7)   0.308 us    |                  }
+ 7)   0.990 us    |                }
+ 7)   0.021 us    |                dm_bm_validate_buffer.isra.4();
+ 7)   0.021 us    |                sm_lookup_bitmap();
+ 7)   0.020 us    |                dec_ref_count();
+ 7)               |                bl_up_write() {
+ 7)   0.021 us    |                  __find_holder();
+ 7)   0.429 us    |                }
+ 7)   0.022 us    |                metadata_ll_save_ie();
+ 7)   8.398 us    |              }
+ 7)   0.025 us    |              out();
+ 7)   8.951 us    |            }
+ 7)   0.087 us    |            __check_holder();
+ 7)               |            __add_holder() {
+ 7)   0.021 us    |              __find_holder();
+ 7)   0.309 us    |            }
+ 7)   0.022 us    |            dm_bm_validate_buffer.isra.4();
+ 7)   0.128 us    |            dm_block_manager_alloc_callback();
+ 7)               |            bl_down_write() {
+ 7)   0.022 us    |              __check_holder();
+ 7)               |              __add_holder() {
+ 7)   0.021 us    |                __find_holder();
+ 7)   0.300 us    |              }
+ 7)   1.179 us    |            }
+ 7)               |            bl_up_read() {
+ 7)   0.021 us    |              __find_holder();
+ 7)   0.442 us    |            }
+ 7)   9.690 us    |            insert_shadow();
+ 7)               |            bl_up_write() {
+ 7)   0.022 us    |              __find_holder();
+ 7)   0.435 us    |            }
+ 7) + 68.049 us   |          }
+ 7) + 68.548 us   |        }
+ 7)               |        dm_block_manager_write_callback() {
+ 7) + 13.107 us   |          bitmap_prepare_for_write();
+ 7) + 13.683 us   |        }
+ 7)               |        dm_block_manager_write_callback() {
+ 7)               |          node_prepare_for_write() {
+ 7)   2.149 us    |            node_check();
+ 7)   5.042 us    |          }
+ 7)   5.496 us    |        }
+ 7)               |        dm_block_manager_write_callback() {
+ 7)               |          node_prepare_for_write() {
+ 7)   2.059 us    |            node_check();
+ 7)   4.674 us    |          }
+ 7)   4.957 us    |        }
+ 7)               |        dm_block_manager_write_callback() {
+ 7)               |          node_prepare_for_write() {
+ 7)   2.044 us    |            node_check();
+ 7)   4.544 us    |          }
+ 7)   4.808 us    |        }
+ 7)               |        dm_block_manager_write_callback() {
+ 7)               |          node_prepare_for_write() {
+ 7)   2.048 us    |            node_check();
+ 7)   4.494 us    |          }
+ 7)   4.780 us    |        }
+ 7)               |        dm_block_manager_write_callback() {
+ 7)   2.326 us    |          bitmap_prepare_for_write();
+ 7)   2.651 us    |        }
+ 7)               |        dm_block_manager_write_callback() {
+ 7)   2.558 us    |          index_prepare_for_write();
+ 7)   2.936 us    |        }
+ 1)   0.057 us    |        sm_metadata_root_size();
+ 1)   0.025 us    |        sm_disk_root_size();
+ 1)               |        save_sm_roots() {
+ 1)   0.030 us    |          sm_metadata_root_size();
+ 1)   0.031 us    |          sm_metadata_copy_root();
+ 1)   0.031 us    |          sm_disk_root_size();
+ 1)   0.040 us    |          sm_disk_copy_root();
+ 1)   1.283 us    |        }
+ 1)               |        bl_down_write() {
+ 1)   0.099 us    |          __check_holder();
+ 1)               |          __add_holder() {
+ 1)   0.027 us    |            __find_holder();
+ 1)   0.544 us    |          }
+ 1)   1.589 us    |        }
+ 1)   0.034 us    |        dm_bm_validate_buffer.isra.4();
+ 1)   0.233 us    |        copy_sm_roots();
+ 1) + 27.853 us   |        wipe_shadow_table();
+ 1)               |        bl_up_write() {
+ 1)   0.026 us    |          __find_holder();
+ 1)   0.499 us    |        }
+ 1)               |        dm_block_manager_write_callback() {
+ 1)   2.825 us    |          sb_prepare_for_write();
+ 1)   3.296 us    |        }
+ 2) ! 5477.774 us |      } /* __commit_transaction */
+ 2) ! 5479.367 us |    } /* commit */
+ 2) ! 5743.351 us |  } /* do_worker */
+ 2)               |  do_worker() {
+ 2)   0.278 us    |    process_prepared();
+ 2)   0.161 us    |    process_prepared();
+ 2)   0.035 us    |    thin_put();
+ 2)   0.022 us    |    thin_put();
+ 2)   0.027 us    |    thin_put();
+ 2)   3.119 us    |  }
+ ------------------------------------------
+ 3)    dd-2957     =>    <idle>-0   
+ ------------------------------------------
+
+ 3)   0.344 us    |  thin_endio();
