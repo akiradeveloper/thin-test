@@ -79,4 +79,4 @@ dd if=/dev/urandom of=/dev/mapper/snap2 count=1
 $HEXDUMP /dev/mapper/snap2 > data/snap2-dump
 
 # Stop ftrace otherwise, the machine slow down (e.g. hard to edit a file in vim)
-echo noop > $TRACE/trace > snap
+echo noop > $TRACE/trace
